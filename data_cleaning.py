@@ -58,4 +58,4 @@ print(df.head())
 print(df.info())
 print(df.describe())
 
-df.to_csv('../data/all_cleaned.csv')
+df.to_csv('../data/all_clean.csv')
