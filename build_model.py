@@ -6,13 +6,12 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, median_absolute_error
 from sklearn.externals import joblib
 
-
 df = pd.read_csv(
     '/Users/lee/Library/CloudStorage/iCloudDrive/Documents/PyCharmProjects/Weather_prediction/data/all_clean.csv')
-# predictors = ['Date', 'Dewpoint', 'Dewpoint_1', 'Dewpoint_2', 'Dewpoint_3', 'Temperature_1', 'Temperature_2']
-predictors = ['Dewpoint', 'Dewpoint_1', 'Dewpoint_2', 'Dewpoint_3', 'Temperature_1', 'Temperature_2']
-
+# predictors = ['Date', 'Dewpoint', 'Dewpoint_1', 'Dewpoint_2', 'Dewpoint_3', 'Temperature_1', 'Temperature_2', 'Date']
 # X = df[predictors].set_index('Date')
+
+predictors = ['Dewpoint', 'Dewpoint_1', 'Dewpoint_2', 'Dewpoint_3', 'Temperature_1', 'Temperature_2']
 X = df[predictors]
 y = df['Temperature']
 
