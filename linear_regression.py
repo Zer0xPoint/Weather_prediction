@@ -7,9 +7,10 @@ df = pd.read_csv(
 # 计算皮尔逊相关 相关度由-1到1
 df.corr()[['Temperature']].sort_values('Temperature')
 # 去掉相关性小于0.6的列
+
 df2 = df[
     ['Temperature'] + ['Dewpoint', 'Dewpoint_1', 'Dewpoint_2', 'Dewpoint_3', 'Temperature_1', 'Temperature_2',
-                       'Date']].set_index('Date')
+                       'Date']].set_index('Date')  # Date与温度关系为非线性，为了预览方便故增加Date列
 
 predictors = ['Dewpoint', 'Dewpoint_1', 'Dewpoint_2', 'Dewpoint_3', 'Temperature_1', 'Temperature_2']
 fig, axes = plt.subplots(nrows=3, ncols=2)

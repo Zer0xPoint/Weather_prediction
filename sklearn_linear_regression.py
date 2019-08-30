@@ -19,6 +19,8 @@ print("\n")
 #
 # date = [[day, (str(int(day) + 1)), day]]
 # temp = tree_model.predict(date)[0]
+
+# 线性回归 日期与温度非线性关系 故无法以时间作为输入参数预测温度
 temp = tree_model.predict(['2019-08-27 09:00:00'])[0]
 
 print("-" * 48)

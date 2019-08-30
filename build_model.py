@@ -36,3 +36,7 @@ prediction = regressor.predict(X_test)
 print("The Explained Variance: %.2f" % regressor.score(X_test, y_test))
 print("The Mean Absolute Error: %.2f degrees celsius" % mean_absolute_error(y_test, prediction))
 print("The Median Absolute Error: %.2f degrees celsius" % median_absolute_error(y_test, prediction))
+
+# The Explained Variance: 0.89
+# The Mean Absolute Error: 2.06 degrees celsius 平均偏差
+# The Median Absolute Error: 1.63 degrees celsius 中位数偏差
